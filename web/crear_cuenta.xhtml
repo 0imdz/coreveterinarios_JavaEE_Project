@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css"></link>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</h:head>
+    
+<h:body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="" id="loginModal">
+                    <div class="modal-body">
+                        <div class="well">
+                            <ul class="nav nav-tabs">
+                                <li><a href="faces/registro.xhtml" data-toggle="tab">Login</a></li>
+                                <li class="active"><a href="#">Create Account</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane active in" id="login">
+                                    s<h:form class="form-horizontal">
+                                        <fieldset>
+                                            <div id="legend">
+                                                <legend class="">Login</legend>
+                                            </div>    
+                                                  <div class="control-group">
+                                                    <label class="control-label"  for="username">Username</label>
+                                                    <div class="controls">
+                                                        <h:inputText id="username" class="input-xlarge" value="#{loginBean.username}"/>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="control-group">
+                                                    <!-- Password-->
+                                                    <label class="control-label" for="password">Password</label>
+                                                    <div class="controls">
+                                                        <h:inputSecret id="password" class="input-xlarge" value="#{loginBean.contrasenya}"/>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="control-group">
+                                                    <!-- Button -->
+                                                    <div class="controls">
+                                                        <h:commandButton class="btn btn-success" action="#{loginBean.login}"/>
+                                                    </div>
+                                                  </div>
+                                        </fieldset>
+                                    </h:form>                
+                                </div>
+                                <div class="tab-pane fade" id="create">
+                                    <h:form id="tab">
+                                      <label>Username</label>
+                                      <h:inputText value="#{loginBean.username}" class="input-xlarge" />
+                                      <label>Correo</label>
+                                      <h:inputText value="#{loginBean.correo}" class="input-xlarge" />
+                                      <label>Contraseña</label>
+                                      <h:inputText value="#{loginBean.contrasenya}" class="input-xlarge" />
+                                      <div>
+                                          <h:commandButton action="#{loginBean.login}" class="btn btn-primary">Create Account</h:commandButton>
+                                      </div>
+                                    </h:form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
