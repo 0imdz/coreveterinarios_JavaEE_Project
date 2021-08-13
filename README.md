@@ -1,9 +1,10 @@
-# About
+# About the project
 
-Veterinary hospital web application that reads and writes data from/to a database.
+Veterinary web application that reads and writes data from/to a database.
 
 *Core Veterinarios web app* allows to create new users and validate a login with the backend side, as well as to consult the stock products or the differents features of the clients stored in the platform.
 
+# App Screen
 ![inicio_sesion](images/1.png)
 ![registro](images/2.png)
 ![panel_usuario](images/3.png)
